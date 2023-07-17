@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Home Screen.unity
+    guid: cfa5fb7513ccab246a5d64c1b78e0910
+  - enabled: 1
+    path: Assets/Scenes/FoodMap Screen.unity
+    guid: 1144d945338debd4a812f5709d9659a8
+  - enabled: 1
+    path: Assets/Scenes/Job Screen.unity
+    guid: 7b0bb744e58b0004a90de08cf5e516df
   m_configObjects: {}
