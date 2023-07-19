@@ -919,6 +919,7 @@ GameObject:
   - component: {fileID: 734527732}
   - component: {fileID: 734527734}
   - component: {fileID: 734527733}
+  - component: {fileID: 734527735}
   m_Layer: 5
   m_Name: Money
   m_TagString: Untagged
@@ -1043,6 +1044,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734527731}
   m_CullTransparentMesh: 1
+--- !u!114 &734527735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734527731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3abc60520d2eb240b1e79124d5b3213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balanceTxt: {fileID: 734527733}
 --- !u!1 &798768075
 GameObject:
   m_ObjectHideFlags: 0
@@ -3378,6 +3392,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6256733659524827468, guid: fc4020d4261f6da45b11858eceb47ffe, type: 3}
+      propertyPath: balanceTxt
+      value: 
+      objectReference: {fileID: 734527733}
     - target: {fileID: 6256733659524827469, guid: fc4020d4261f6da45b11858eceb47ffe, type: 3}
       propertyPath: m_Name
       value: LevelManager
