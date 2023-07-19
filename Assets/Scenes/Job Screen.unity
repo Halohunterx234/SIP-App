@@ -1286,9 +1286,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &911155384
 MonoBehaviour:
@@ -1505,6 +1505,7 @@ GameObject:
   - component: {fileID: 1121532622}
   - component: {fileID: 1121532621}
   - component: {fileID: 1121532620}
+  - component: {fileID: 1121532623}
   m_Layer: 5
   m_Name: JobTitle
   m_TagString: Untagged
@@ -1594,7 +1595,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1121532623}
+        m_TargetAssemblyTypeName: JobRefer, Assembly-CSharp
+        m_MethodName: SetJob
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -1669,6 +1682,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121532618}
   m_CullTransparentMesh: 1
+--- !u!114 &1121532623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121532618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98f7e6e0849be24e9ee4ec44431c23c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1201377340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,9 +1806,9 @@ RectTransform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_SizeDelta: {x: 20, y: -17}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1231814056
 MonoBehaviour:
@@ -1982,7 +2007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 802767, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 784, y: 300}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1387848131
@@ -2267,9 +2292,9 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
+  m_SizeDelta: {x: -17, y: 20}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1526176684
 MonoBehaviour:
@@ -2314,8 +2339,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1242962055}
   m_HandleRect: {fileID: 1242962054}
   m_Direction: 0
-  m_Value: -755544.94
-  m_Size: 0.9986449
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3250,7 +3275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b3dac937c825f8458c816dafafb542a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scroll: {fileID: 1290259359}
+  scroll: {fileID: 2133228849}
+  jobPrefab: {fileID: 4609673742396118767, guid: 8f6292a6975e27e46aad0242135ab351, type: 3}
+  content: {fileID: 1290259359}
+  jobtitle: 
 --- !u!1 &2133228847
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,7 +3336,7 @@ MonoBehaviour:
   m_Content: {fileID: 1290259360}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 0
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -3316,8 +3344,8 @@ MonoBehaviour:
   m_Viewport: {fileID: 911155383}
   m_HorizontalScrollbar: {fileID: 1526176684}
   m_VerticalScrollbar: {fileID: 1231814056}
-  m_HorizontalScrollbarVisibility: 2
-  m_VerticalScrollbarVisibility: 2
+  m_HorizontalScrollbarVisibility: 1
+  m_VerticalScrollbarVisibility: 1
   m_HorizontalScrollbarSpacing: -3
   m_VerticalScrollbarSpacing: -3
   m_OnValueChanged:
