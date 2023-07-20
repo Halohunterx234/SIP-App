@@ -220,7 +220,14 @@ public class JobSpawner : MonoBehaviour
     public void start()
     {
         if (jobtitle == "") return;
-        for (int i = 0; i < 10; i++)
+        if (content.GetComponentsInChildren<Transform>().Length != 0)
+        {
+            foreach (Transform job in content.GetComponentsInChildren<Transform>())
+            {
+                if (job.gameObject != content) Destroy(job.gameObject);
+            }
+        }
+        for (int i = 0; i < Random.Range(1, 10); i++)
         {
             RectTransform viewportRect = scroll.GetComponent<RectTransform>();
             float viewportWidth = viewportRect.rect.width;
@@ -231,7 +238,7 @@ public class JobSpawner : MonoBehaviour
             rt.sizeDelta = new Vector2(viewportWidth, viewportWidth);
             job.transform.Translate(Vector2.down * ((i+0.5f)*viewportWidth));
             Image jobImg = job.GetComponent<Image>();
-
+            job.AddComponent<Button>();
             //spawn job title text
             
 

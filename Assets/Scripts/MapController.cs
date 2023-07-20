@@ -8,7 +8,7 @@ public class MapController : MonoBehaviour
 {
     public string product;
     public GameObject pinGO, map, canvas, nameobj, priceobj, discountobj, ratingobj, distanceobj;
-    public float width, height;
+    public float width, height, budget;
 
     public List<string> names = new List<string>
     {
@@ -180,7 +180,7 @@ public class MapController : MonoBehaviour
     "15% off on all food items",
     "Limited-time flash sale - extra 25% off",
     "Free gift with every purchase",
-    "Combo deal - sandwich, fries, and drink for $5",
+    "Combo deal - add a sandwich, fries, and drink for $5",
     "Clearance sale - up to 70% off",
     "Special student discount - 20% off",
     "BOGO 50% off on clothing",
@@ -230,6 +230,13 @@ public class MapController : MonoBehaviour
     }
     public void spawnPin()
     {
+        if (FindObjectsOfType<PinInfo>().Length != 0)
+        {
+            foreach (PinInfo pin in FindObjectsOfType<PinInfo>())
+            {
+                Destroy(pin.GetComponent<Transform>().gameObject);
+            }
+        }
         int ran = UnityEngine.Random.Range(1, 5);
         for (int i = 0; i < ran; i++)
         {
@@ -238,13 +245,14 @@ public class MapController : MonoBehaviour
             pin.transform.SetParent(canvas.transform);
             RectTransform pinRT = pin.GetComponent<RectTransform>();
             pinRT.transform.position = new Vector3(UnityEngine.Random.Range(map.GetComponent<RectTransform>().position.x - (width / 2 * 10), map.GetComponent<RectTransform>().position.x + (width / 2 * 10)),
-                UnityEngine.Random.Range(map.GetComponent<RectTransform>().position.y - (height / 2 * 10),map.GetComponent<RectTransform>().position.y + (height / 2 * 10)), 0);
+                UnityEngine.Random.Range(map.GetComponent<RectTransform>().position.y - (height / 2 * 10), map.GetComponent<RectTransform>().position.y + (height / 2 * 10)), 0);
             PinInfo pi = pin.AddComponent<PinInfo>();
             pi.namee = names[UnityEngine.Random.Range(0, names.Count)];
-            pi.price = UnityEngine.Random.Range(0, 30).ToString() + "." + UnityEngine.Random.Range(0, 100);
+            if (budget == 0) pi.price = UnityEngine.Random.Range(0, 30).ToString() + "." + UnityEngine.Random.Range(0, 100);
+            else pi.price = UnityEngine.Random.Range(0, budget).ToString() + "." + UnityEngine.Random.Range(0, 100);
             pi.discount = discounts[UnityEngine.Random.Range(0, discounts.Count)];
-            pi.ratings = UnityEngine.Random.Range(0, 5).ToString();
-            pi.distance = (Vector2.Distance((Vector2)map.GetComponent<RectTransform>().transform.position, (Vector2)pinRT.transform.position)*10/7).ToString();
+            pi.ratings = UnityEngine.Random.Range(0, 5).ToString() + "." + UnityEngine.Random.Range(0, 10).ToString();
+            pi.distance = Mathf.RoundToInt(Vector2.Distance((Vector2)map.GetComponent<RectTransform>().transform.position, (Vector2)pinRT.transform.position)*10/7).ToString();
             pi.nameTxt = nameobj.GetComponent<TextMeshProUGUI>(); pi.priceTxt = priceobj.GetComponent<TextMeshProUGUI>(); pi.discountTxt = discountobj.GetComponent<TextMeshProUGUI>();
             pi.ratingsTxt = ratingobj.GetComponent<TextMeshProUGUI>(); pi.distanceTxt = distanceobj.GetComponent<TextMeshProUGUI>();
         }
