@@ -51,5 +51,16 @@ public class PinInfo : MonoBehaviour
             transform.localScale *= 1 +(sign *Time.deltaTime/5);
             cd += Time.deltaTime;
         }
+        if (sign == 1)
+        {
+            UnityEngine.UI.Image pinImg = this.GetComponent<UnityEngine.UI.Image>();
+            pinImg.color = Color.red;
+        }
+        else if (sign == -1)
+        {
+            UnityEngine.UI.Image pinImg = this.GetComponent<UnityEngine.UI.Image>();
+            pinImg.color = Color.white;
+        }
     }
+
 }
