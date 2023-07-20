@@ -4,7 +4,6 @@ using System.Diagnostics;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering.VirtualTexturing;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 

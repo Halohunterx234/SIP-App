@@ -22,16 +22,19 @@ public class SceneController : MonoBehaviour
 
     public void MoveToHome()
     {
+        if (SceneManager.GetActiveScene().name == "Home Screen") return;
         SceneManager.LoadScene("Home Screen");
     }
 
     public void MoveToMap()
     {
+        if (SceneManager.GetActiveScene().name == "FoodMap Screen") return;
         SceneManager.LoadScene("FoodMap Screen");
     }
 
     public void MoveToJob()
     {
+        if (SceneManager.GetActiveScene().name == "Job Screen") return;
         SceneManager.LoadScene("Job Screen");
     }
 }

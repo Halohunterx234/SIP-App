@@ -1527,6 +1527,7 @@ GameObject:
   - component: {fileID: 953533727}
   - component: {fileID: 953533726}
   - component: {fileID: 953533728}
+  - component: {fileID: 953533729}
   m_Layer: 5
   m_Name: Food
   m_TagString: Untagged
@@ -1635,7 +1636,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 953533726}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 953533729}
+        m_TargetAssemblyTypeName: Filter, Assembly-CSharp
+        m_MethodName: SetCategory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &953533729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953533724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e57c562f8193b4280c536cfe74c0e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDrop: 0
+  dropdown: {fileID: 0}
 --- !u!1 &987171256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,8 +1810,9 @@ GameObject:
   - component: {fileID: 1080719787}
   - component: {fileID: 1080719786}
   - component: {fileID: 1080719788}
+  - component: {fileID: 1080719789}
   m_Layer: 5
-  m_Name: Basic
+  m_Name: Basic Necessities
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1891,7 +1919,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1080719786}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1080719789}
+        m_TargetAssemblyTypeName: Filter, Assembly-CSharp
+        m_MethodName: SetCategory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1080719789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080719784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e57c562f8193b4280c536cfe74c0e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDrop: 0
+  dropdown: {fileID: 0}
 --- !u!1 &1193293776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,6 +2187,7 @@ GameObject:
   - component: {fileID: 1334299459}
   - component: {fileID: 1334299458}
   - component: {fileID: 1334299460}
+  - component: {fileID: 1334299461}
   m_Layer: 5
   m_Name: Vouchers
   m_TagString: Untagged
@@ -2241,7 +2296,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1334299458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1334299461}
+        m_TargetAssemblyTypeName: Filter, Assembly-CSharp
+        m_MethodName: SetCategory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1334299461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334299456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e57c562f8193b4280c536cfe74c0e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDrop: 0
+  dropdown: {fileID: 0}
 --- !u!1 &1346235559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,6 +2746,7 @@ GameObject:
   - component: {fileID: 1532103915}
   - component: {fileID: 1532103914}
   - component: {fileID: 1532103916}
+  - component: {fileID: 1532103917}
   m_Layer: 5
   m_Name: Groceries
   m_TagString: Untagged
@@ -2773,7 +2855,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1532103914}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1532103917}
+        m_TargetAssemblyTypeName: Filter, Assembly-CSharp
+        m_MethodName: SetCategory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1532103917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532103912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e57c562f8193b4280c536cfe74c0e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDrop: 0
+  dropdown: {fileID: 0}
 --- !u!1 &1704358264
 GameObject:
   m_ObjectHideFlags: 0
